@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030b14;
+  --foreground: #e0f2fe;
+  --primary-cyan: #00f0ff;
+  --primary-cyan-dim: rgba(0, 240, 255, 0.2);
+  --dark-panel: #0a1321;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cyan-glow: var(--primary-cyan);
+  --color-panel: var(--dark-panel);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono), monospace;
+  overflow: hidden;
+}
+
+.glass-panel {
+  background: var(--dark-panel);
+  border: 1px solid var(--primary-cyan-dim);
+  box-shadow: 0 0 10px var(--primary-cyan-dim), inset 0 0 15px rgba(0, 240, 255, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+.cyan-glow-text {
+  color: var(--primary-cyan);
+  text-shadow: 0 0 8px var(--primary-cyan);
+}
+
+/* Animations for sci-fi feel */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background: linear-gradient(to bottom, transparent, var(--primary-cyan-dim), transparent);
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
+}

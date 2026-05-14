@@ -1,0 +1,8 @@
+opencv-python==4.10.0
+mediapipe==0.10.14
+pyautogui==3.1.2
+pynput==2.0.9
+numpy
+pillow
+pycaw
+comtypes
