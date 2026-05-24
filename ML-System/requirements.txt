@@ -1,8 +1,10 @@
-opencv-python==4.10.0
+opencv-python
 mediapipe==0.10.14
-pyautogui==3.1.2
-pynput==2.0.9
+pyautogui
+pynput
 numpy
 pillow
 pycaw
 comtypes
+flask
+flask_cors
