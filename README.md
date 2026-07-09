@@ -118,29 +118,13 @@ Task4 - Hand gesture recognition/
 
 The system recognizes **10 distinct hand gestures**, each mapped to a specific system action:
 
-| Gesture | Emoji | Detection Logic | System Action |
-|---|---|---|---|
-| **Thumbs Up** | 👍 | All 4 fingers curled, thumb tip clearly above MCP | 🔊 Increase Volume (+5%) |
-| **Thumbs Down** | 👎 | All 4 fingers curled, thumb tip clearly below MCP | 🔈 Decrease Volume (-5%) |
-| **Index Finger Up** | ☝️ | Only index finger extended | 🖱️ Move Mouse Cursor |
-| **OK Sign** | 👌 | Thumb-index pinch distance < threshold, middle & ring extended | 🖱️ Left Mouse Click |
-| **Peace Sign** | ✌️ | Index + middle extended, ring + pinky curled | 📸 Take Screenshot |
-| **Rock Sign** | 🤘 | Index + pinky extended, middle + ring curled | 🔄 Toggle Interaction Mode |
-| **Open Palm** | 🖐️ | All 4 fingers + thumb extended | ⏸️ Pause / Resume Hand Tracking |
-| **Closed Fist** | ✊ | All fingers curled, thumb neither up nor down | 🔒 Freeze / Unfreeze Cursor |
-| **Four Fingers** | 4️⃣ | All 4 fingers extended, thumb not pointing up | 🎯 Reset Cursor to Screen Center |
-| **Pinch & Hold** | 🤏 | Thumb-index distance < PINCH_CLOSE, others curled | 🖱️ Drag-and-Drop |
-
-### Interaction Modes
-
-The Rock Sign (🤘) cycles through three operational modes:
-
-| Mode | Description |
-|---|---|
-| **Normal Mode** | Default OS control — cursor movement, clicks, volume |
-| **Gaming Mode** | Optimized for low-latency input |
-| **Drawing Mode** | Precision-focused cursor control |
-
+| Gesture | Detection Logic | System Action |
+|---|---|---|
+| **Thumbs Up** | All 4 fingers curled, thumb tip clearly above MCP | Increase Volume (+5%) |
+| **Thumbs Down** | All 4 fingers curled, thumb tip clearly below MCP | Decrease Volume (-5%) |
+| **Index Finger Up** | Only index finger extended | Move Mouse Cursor |
+| **Peace Sign** | Index + middle extended, ring + pinky curled | Take Screenshot |
+| **Open Palm** | All 4 fingers + thumb extended | Pause / Resume Hand Tracking |
 ---
 
 ## System Architecture
@@ -280,13 +264,13 @@ GET  /api/status      →  JSON snapshot of current system state
 
 ```json
 {
-  "gesture":         "👍 Thumbs Up",
+  "gesture":         "Thumbs Up",
   "gesture_raw":     "THUMBS_UP",
   "mode":            "Normal Mode",
   "tracking_paused": false,
   "cursor_frozen":   false,
   "fps":             58,
-  "hud_msgs":        ["🔊 Volume +5"]
+  "hud_msgs":        ["Volume +5"]
 }
 ```
 
@@ -405,7 +389,7 @@ npm install
 npm run dev
 ```
 
-Open your browser at **`http://localhost:3000`** 🚀
+Open your browser at **`http://localhost:3000`**
 
 ---
 
@@ -426,16 +410,11 @@ Press **`Q`** to quit.
 
 | What you want to do | Show this gesture |
 |---|---|
-| Turn volume up | 👍 Point thumb up, curl all fingers |
-| Turn volume down | 👎 Point thumb down, curl all fingers |
-| Move the mouse | ☝️ Raise only your index finger |
-| Click | 👌 Touch thumb to index tip (OK sign) |
-| Take a screenshot | ✌️ Raise index + middle finger |
-| Freeze / unfreeze mouse | ✊ Make a fist |
-| Pause all gesture control | 🖐️ Open palm flat |
-| Snap cursor to center | 4️⃣ Raise all 4 fingers (not thumb) |
-| Switch mode | 🤘 Rock sign (index + pinky up) |
-| Drag and drop | 🤏 Pinch and hold for 0.3s, then move |
+| Turn volume up | Point thumb up, curl all fingers |
+| Turn volume down | Point thumb down, curl all fingers |
+| Move the mouse | Raise only your index finger |
+| Take a screenshot | Raise index + middle finger |
+| Pause all gesture control | Open palm flat |
 
 ---
 
@@ -444,6 +423,6 @@ Press **`Q`** to quit.
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/Sathwik656)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/sathwik677)
 
-*If you found this project helpful, please consider giving it a ⭐ on GitHub!*
+*If you found this project helpful, please consider giving it a star on GitHub!*
 
 </div>

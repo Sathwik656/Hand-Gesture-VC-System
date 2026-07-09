@@ -6,9 +6,7 @@ import { Activity, Camera, Maximize, Cpu, Shield, Zap, Target } from "lucide-rea
 interface Status {
   gesture: string;
   gesture_raw: string;
-  mode: string;
   tracking_paused: boolean;
-  cursor_frozen: boolean;
   fps: number;
   hud_msgs: string[];
 }
@@ -97,12 +95,6 @@ export default function Dashboard() {
                 </div>
               </div>
               <div>
-                <div className="text-xs text-cyan-600/80 mb-1">TRACKING MODE</div>
-                <div className="text-lg text-cyan-300 border-l-2 border-cyan-500 pl-3">
-                  {status?.mode || "INITIALIZING"}
-                </div>
-              </div>
-              <div>
                 <div className="text-xs text-cyan-600/80 mb-1">LATEST GESTURE</div>
                 <div className="text-xl text-yellow-400 uppercase tracking-wider">
                   {status?.gesture || "—"}
@@ -120,12 +112,6 @@ export default function Dashboard() {
                 <span className="text-sm">Engine Status</span>
                 <span className={status?.tracking_paused ? "text-red-400" : "text-green-400"}>
                   {status?.tracking_paused ? "PAUSED" : "ACTIVE"}
-                </span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-sm">Cursor Lock</span>
-                <span className={status?.cursor_frozen ? "text-cyan-400" : "text-gray-500"}>
-                  {status?.cursor_frozen ? "ENGAGED" : "FREE"}
                 </span>
               </div>
             </div>

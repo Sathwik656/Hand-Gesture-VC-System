@@ -1,0 +1,8 @@
+{
+  // Always use the project-local venv — eliminates "import not found" IDE errors
+  "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  // Tell the linter/formatter to use the venv too
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.typeCheckingMode": "basic"
+}
