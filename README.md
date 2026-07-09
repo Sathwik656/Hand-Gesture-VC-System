@@ -3,8 +3,6 @@
 # Hand Gesture Virtual Control System
 ### *Real-Time Gesture-Driven System Control with a Sci-Fi HUD Dashboard*
 
-**Prodigy InfoTech — Machine Learning Internship | Task 4**
-
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2.6-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
